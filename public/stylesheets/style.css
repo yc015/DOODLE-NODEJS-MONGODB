@@ -42,7 +42,7 @@ body {
 /* Set the appearance for the app class*/
 .app {
     /* Set the width of this element to 400px */
-    width: 1400px;
+    width: 100%;
     text-align: center;
 }
 
@@ -69,7 +69,7 @@ body {
 /* Set the appearance for the input element inside the element of app-container class */
 .app-header {
     /* Let the width of input box to be 92% of its container */
-    width: 50%;
+    width: 45%;
     /* Set border to its initial value */
     border: none;
     /* Round the corner of the input box */
@@ -129,7 +129,7 @@ body {
     /* Set the border to initial value */
     border: none;
     /* Round the border corner */
-    border-radius: 5px;
+    border-radius: 2px;
     /* Use font Candal (or sans-serif if Candal is not available) */
     font-family: 'Candal', sans-serif;
     font-size: 40px;
@@ -150,7 +150,7 @@ body {
     /* Set the border to initial value */
     border: none;
     /* Round the border corner */
-    border-radius: 5px;
+    border-radius: 2px;
     /* Use font Candal (or sans-serif if Candal is not available) */
     font-family: 'Candal', sans-serif;
     background: rgba(0, 0, 0, 0.3);
