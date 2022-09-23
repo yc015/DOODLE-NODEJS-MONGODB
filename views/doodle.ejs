@@ -19,6 +19,17 @@
         <div class="todo">
             <!--List of TODO items-->
         <form action="/" method="POST">
+            <!--Title for sending an email input box-->
+            <h3 style="text-align: center;">Enter Your Name here and Submit Response!</h3>
+            <!--Container of email address input box-->
+            <div class="todo">
+                <!--Action for submiting email address and request an email copy of TODO list-->
+                
+                <!--Input form for the email address-->
+                <input type="text" name="name" class="todo-header">
+                <!--Submit email address button-->
+                <button type="submit" class="add-button">Submit <span class="fas fa-plus"></span></button>
+            </div>
             <ul>
                 <li>
                     <ul>
@@ -78,17 +89,6 @@
                             <label><i class="fas fa-user-friends"></i> <%= counts[3] %></label>
                         </li>
                     </ul>
-                    <!--Title for sending an email input box-->
-                    <h3 style="text-align: center;">Enter Your Name here and Submit Response!</h3>
-                    <!--Container of email address input box-->
-                    <div class="todo">
-                        <!--Action for submiting email address and request an email copy of TODO list-->
-                        
-                        <!--Input form for the email address-->
-                        <input type="text" name="name" class="todo-header">
-                        <!--Submit email address button-->
-                        <button type="submit" class="add-button">Submit <span class="fas fa-plus"></span></button>
-                    </div>
                 </li>
                 <!--Iterate through the list of TODO objects and display their details in the list item element-->
                 <!--Inside <%%> are scripting language-->
