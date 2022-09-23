@@ -17,8 +17,8 @@ body {
     background: #7FBCD2;
 }
 
-/* Style for todo-container class */
-.todo-container {
+/* Style for app-container class */
+.app-container {
     /* Text color */
     color: white;
     /* pad it by 20px */
@@ -39,15 +39,15 @@ body {
     overflow: auto;
 }
 
-/* Set the appearance for the todo class*/
-.todo {
+/* Set the appearance for the app class*/
+.app {
     /* Set the width of this element to 400px */
     width: 1400px;
     text-align: center;
 }
 
-/* Set the appearance of the h2 inside the element of todo-container class*/
-.todo-container h2 {
+/* Set the appearance of the h2 inside the element of app-container class*/
+.app-container h2 {
     /* Pad the element by 10px from each side*/
     padding: 10px;
     /* Use font Candal (or sans-serif if Candal is not available) */
@@ -56,8 +56,8 @@ body {
     font-size: 2em;
 }
 
-/* Set the appearance of the h3 inside the element of todo-conatiner class */
-.todo-container h3 {
+/* Set the appearance of the h3 inside the element of app-conatiner class */
+.app-container h3 {
     /* Pad the element by 8px from each side */
     padding: 8px;
     /* Use font Candal (or sans-serif if Candal is not available) */
@@ -66,8 +66,8 @@ body {
     font-size: 1em;
 }
 
-/* Set the appearance for the input element inside the element of todo-container class */
-.todo-header {
+/* Set the appearance for the input element inside the element of app-container class */
+.app-header {
     /* Let the width of input box to be 92% of its container */
     width: 50%;
     /* Set border to its initial value */
@@ -79,8 +79,8 @@ body {
     text-align: center;
 }
 
-/* Set the appearance for the button element inside the element of todo-header class */
-.todo-header button {
+/* Set the appearance for the button element inside the element of app-header class */
+.app-header button {
     /* Text color */
     color: white;
     /* Set border to its initial value */
@@ -97,28 +97,10 @@ body {
     background-color: #FF5733;
 }
 
-/* Set the appearance of the item list inside the element of todo-container class */
-.todo-container ul {
+/* Set the appearance of the item list inside the element of app-container class */
+.app-container ul {
     /* Set the style of the list to initial values */
     list-style: none;
-}
-
-/* Set the appearance of todo-list-item */
-.todo-list-item {
-    /* Pad the element by 10px from each side */
-    padding: 10px;
-    /* Set the top margin to be 10px */
-    margin-top: 10px;
-    /* Set the border to initial value */
-    border: none;
-    /* Round the border corner */
-    border-radius: 5px;
-    /* Use font Candal (or sans-serif if Candal is not available) */
-    font-family: 'Candal', sans-serif;
-    background: rgba(0, 0, 0, 0.3);
-    display: inline-block;
-    width: 250px;
-    height: 140px;
 }
 
 .partially-avail {
@@ -205,26 +187,7 @@ body {
     display: inline-block;
 }
 
-/* Set the appearance for the form element inside the todo-list-item element */
-.todo-list-item form {
-    /* Let width to be the same as its container*/
-    width: 100%;
-    display: flex;
-}
-
-/* Set the appearance for the input element inside the container from todo-list-item class */
-.todo-list-item input {
-    /* The item grows twice much as other elements in its flex direction*/
-    flex-grow: 2;
-    /* Set the right margin thickness to 20px */
-    margin-right: 20px;
-    border: none;
-    border-radius: 5px;
-    font-family: 'Candal', sans-serif;
-    width: 50%;
-}
-
-/* Set the appearance for the button element inside the todo-list-item container */
+/* Set the appearance for the button element */
 .add-button {
     color: white;
     border: none;
@@ -235,12 +198,6 @@ body {
     font-family: 'Candal', sans-serif;
     background-color: #FF5733;
     width: 100px;
-}
-
-/* Set the appearance for div inside todo-list-item class container*/
-.todo-list-item div {
-    /* The element grows twice in its flex direction compared with the other element*/
-    flex-grow: 2;
 }
 
 .multi-checkbox .check {

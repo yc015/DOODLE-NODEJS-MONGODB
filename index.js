@@ -5,7 +5,7 @@ const app = express();
 // Load the dotenv module that allows us to load environmental variables from .env file
 const dotenv = require("dotenv");
 
-// Load the model for TodoTask
+// Load the model for calendar card
 const CalendarCard = require("./models/calendar");
 
 // Load the content from the .env file
@@ -29,10 +29,10 @@ app.use("/static", express.static("public"));
 // The data can be found from the body attribute of the request
 app.use(express.urlencoded({ extended: true }));
 
-// Load the view (the layout of the todo app) from the ejs files under the views folder
+// Load the view (the layout of the doodle schedule app) from the ejs files under the views folder
 app.set("view engine", "ejs");
 
-// GET method for rendering the todo app page using the view (layout) in doodle.ejs 
+// GET method for rendering the doodle schedule app page using the view (layout) in doodle.ejs 
 app.get("/",async (req, res) => {
     CalendarCard.find({}, (err, card) => {
         var avail_count = []
@@ -45,30 +45,33 @@ app.get("/",async (req, res) => {
             }
             avail_count.push(count)
         }
-        // pass the todoTasks object as argument tasks to the ejs file
+        // pass the calendard cards and availability count as arguments calendardCard and counts to the ejs file
         res.render("doodle.ejs", { calendarCard: card, counts: avail_count });
     });
  });
 
-// POST method for adding entered task into the mongodb database
+// POST method for entering availability into the mongodb database
 app.post('/',async (req, res) => {
-    var availability = [0, 0, 0, 0]
+    // Variable for storing availability
+    var availability = []
+    // Interate through the radio buttons
     for (let index = 0; index < 4; index++) {
-        availability[index] = parseInt(req.body["date-" + (index + 1)])
+        // Get the input availability from the checkboxes
+        availability.push(parseInt(req.body["date-" + (index + 1)]))
     }
 
+    // Create the new availability object that will be inserted into the mongodb database
     const calendarCard = new CalendarCard({
         content: availability,
         name: req.body.name
     });
 
 
-    // console.log(calendarCard)
-
     // If insertion request is successful delivered
     // Try waiting for the insertion complete and redirect to the main page
     try {
         console.log("saving data...")
+        // Wait for the new availability object to be inserted in the database
         await calendarCard.save();
         console.log("data saved")
         res.redirect("/");
