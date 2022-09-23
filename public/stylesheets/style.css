@@ -226,7 +226,7 @@ body {
 }
 
 /* Set the appearance for the button element inside the todo-list-item container */
-.todo-list-item button {
+.add-button {
     color: white;
     border: none;
     border-radius: 5px;
@@ -235,6 +235,7 @@ body {
     padding: 5px;
     font-family: 'Candal', sans-serif;
     background-color: #FF5733;
+    width: 40px;
 }
 
 /* Set the appearance for div inside todo-list-item class container*/
