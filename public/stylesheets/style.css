@@ -1,0 +1,268 @@
+/* Style for all elements */
+* {
+    /* Remove the margin thickness */
+    margin: 0;
+    /* No padding */
+    padding: 0;
+    /* Consider the size of border and padding when calculating an element's width and height */
+    box-sizing: border-box;
+}
+
+/* Style for the body */
+body {
+    /* Set the background color of the body element */
+    background: #C060A1;
+}
+
+/* Style for todo-container class */
+.todo-container {
+    /* Text color */
+    color: white;
+    /* Position this element using absolute (positioned relative to its closest ancestor) */
+    position: absolute;
+    /* position this element in the center of its container */
+    top:50%;
+    left: 50%;
+    /* pad it by 20px */
+    padding: 20px;
+    /* Set its width to 600px */
+    width: 1500px;
+    /* Position this element in the center of its container */
+    transform: translate(-50%,-50%);
+    /* Set background color (red, green, blue, opaqueness/alpha) */
+    background: rgba(255, 255, 255, 0.1);
+    /* Round the border with a arc that has radius of 20px */
+    border-radius: 20px;
+    /* Let the content layout like in a flex model */
+    display: flex;
+    /* Let element layout in a column*/
+    flex-direction: column;
+    /* Center aligh the elements inside*/
+    align-items: center;
+}
+
+/* Set the appearance for the todo class*/
+.todo {
+    /* Set the width of this element to 400px */
+    width: 1400px;
+}
+
+/* Set the appearance of the h2 inside the element of todo-container class*/
+.todo-container h2 {
+    /* Pad the element by 10px from each side*/
+    padding: 10px;
+    /* Use font Candal (or sans-serif if Candal is not available) */
+    font-family: 'Candal', sans-serif;
+    /* Font size of the text */
+    font-size: 2em;
+}
+
+/* Set the appearance of the h3 inside the element of todo-conatiner class */
+.todo-container h3 {
+    /* Pad the element by 8px from each side */
+    padding: 8px;
+    /* Use font Candal (or sans-serif if Candal is not available) */
+    font-family: 'Candal', sans-serif;
+    /* Font size of the text */
+    font-size: 1em;
+}
+
+/* Set the appearance for the input element inside the element of todo-container class */
+.todo-header {
+    /* Let the width of input box to be 92% of its container */
+    width: 92%;
+    /* Set border to its initial value */
+    border: none;
+    /* Round the corner of the input box */
+    border-radius: 5px;
+    /* Let the height of input box to be 20px */
+    height: 20px;
+    text-align: center;
+}
+
+/* Set the appearance for the button element inside the element of todo-header class */
+.todo-header button {
+    /* Text color */
+    color: white;
+    /* Set border to its initial value */
+    border: none;
+    /* Round the corner of the input box */
+    border-radius: 50%;
+    /* Set the appearance of the cursor when it hovers on the element */
+    cursor: pointer;
+    /* Pad the element */
+    padding: 5px;
+    /* Use font Candal (or sans-serif if Candal is not available) */
+    font-family: 'Candal', sans-serif;
+    /* Set the background color of the element */
+    background-color: #FF5733;
+}
+
+/* Set the appearance of the item list inside the element of todo-container class */
+.todo-container ul {
+    /* Set the style of the list to initial values */
+    list-style: none;
+}
+
+/* Set the appearance of todo-list-item */
+.todo-list-item {
+    /* Pad the element by 10px from each side */
+    padding: 10px;
+    /* Set the top margin to be 10px */
+    margin-top: 10px;
+    /* Set the border to initial value */
+    border: none;
+    /* Round the border corner */
+    border-radius: 5px;
+    /* Use font Candal (or sans-serif if Candal is not available) */
+    font-family: 'Candal', sans-serif;
+    background: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    width: 250px;
+    height: 140px;
+}
+
+.partially-avail {
+    color: orange;
+    background-color: lightyellow;
+    height: 110px; 
+}
+
+.unavailable-date {
+    color: black;
+    background-color: grey;
+    height: 110px; 
+}
+
+.available-date {
+    color: limegreen;
+    background-color: lightgreen;
+    height: 110px; 
+}
+
+.calendar-avail {
+    /* Pad the element by 10px from each side */
+    padding: 10px;
+    /* Set the top margin to be 10px */
+    margin-top: 10px;
+    /* Set the border to initial value */
+    border: none;
+    /* Round the border corner */
+    border-radius: 5px;
+    /* Use font Candal (or sans-serif if Candal is not available) */
+    font-family: 'Candal', sans-serif;
+    font-size: 50px;
+    background: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    width: 250px;
+    height: 130px;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.calendar-event {
+    /* Pad the element by 10px from each side */
+    padding: 10px;
+    /* Set the top margin to be 10px */
+    margin-top: 10px;
+    /* Set the border to initial value */
+    border: none;
+    /* Round the border corner */
+    border-radius: 5px;
+    /* Use font Candal (or sans-serif if Candal is not available) */
+    font-family: 'Candal', sans-serif;
+    background: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    width: 250px;
+    height: 140px;
+}
+
+.calendar-header {
+    /* Pad the element by 10px from each side */
+    padding: 10px;
+    /* Set the top margin to be 10px */
+    margin-top: 10px;
+    /* Set the border to initial value */
+    border: none;
+    /* Round the border corner */
+    border-radius: 5px;
+    /* Use font Candal (or sans-serif if Candal is not available) */
+    font-family: 'Candal', sans-serif;
+    background: rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    width: 250px;
+    height: 140px;
+}
+
+.calendar-event div{
+    /* Pad the element by 10px from each side */
+    padding: 4px;
+    /* Set the border to initial value */
+    border: none;
+    /* Use font Candal (or sans-serif if Candal is not available) */
+    font-family: 'Candal', sans-serif;
+    font-size: small;
+    display: inline-block;
+}
+
+/* Set the appearance for the form element inside the todo-list-item element */
+.todo-list-item form {
+    /* Let width to be the same as its container*/
+    width: 100%;
+    display: flex;
+}
+
+/* Set the appearance for the input element inside the container from todo-list-item class */
+.todo-list-item input {
+    /* The item grows twice much as other elements in its flex direction*/
+    flex-grow: 2;
+    /* Set the right margin thickness to 20px */
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Candal', sans-serif;
+    width: 50%;
+}
+
+/* Set the appearance for the button element inside the todo-list-item container */
+.todo-list-item button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    /* Set the appearance of the cursor when it hovers on the element */
+    cursor: pointer;
+    padding: 5px;
+    font-family: 'Candal', sans-serif;
+    background-color: #FF5733;
+}
+
+/* Set the appearance for div inside todo-list-item class container*/
+.todo-list-item div {
+    /* The element grows twice in its flex direction compared with the other element*/
+    flex-grow: 2;
+}
+
+.multi-checkbox .check {
+    display: inline-block;
+    vertical-align: top;
+    width: 160px;
+    height: 30px;
+    border: 1px solid #333;
+    margin: 3px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+  
+.multi-checkbox .check.unchecked i {
+    display: none;
+}
+  
+.multi-checkbox .check.partial i.fa-circle {
+    display: none;
+}
+  
+.multi-checkbox .check.checked i.fa-check {
+    display: none;
+}

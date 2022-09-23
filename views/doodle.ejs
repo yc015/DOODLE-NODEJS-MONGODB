@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+    <!--Title of the TODO App page-->
+    <title>Doodle Schedule</title>
+    <!--Reference to the css style sheet-->
+    <link rel="stylesheet" href="/static/stylesheets/style.css" type="text/css">
+    <!--Import the font resource (Ballo Bhai, Candal, and Chewy) from google-->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Candal|Chewy&display=swap" rel="stylesheet">
+    <!--Since we are using icon from font awesome, reference the css source from font awesome here too-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+    <!--Container for the Task input form, Task list, and email input form-->
+    <div class="todo-container">
+        <!--Title of the App-->
+        <h2>Available Dates</h2>
+        <!--Container of the Task input form and Task list-->
+        <div class="todo">
+            <!--List of TODO items-->
+        <form action="/" method="POST">
+            <ul>
+                <li>
+                    <ul>
+                        <li class="calendar-event">
+                            Available Meeting Dates<br>
+                            and your availability
+                            <div>
+                                1. Unavailable<br>
+                                2. Available<br>
+                                3. Yes, if need be
+                            </div>
+                            <br>
+                            <label><i class="fas fa-user-friends"></i> Available Pollees</label>
+                        </li>
+                        <li class="calendar-event">
+                            SEP 23 Fri<br>
+                            6:00 PM - 7:00 PM<br>
+                            <div>
+                                <input type="radio" name="date-1" value="0" checked>Unavailable<br>
+                                <input type="radio" name="date-1" value="1">Available<br>
+                                <input type="radio" name="date-1" value="2">Yes, if need be
+                            </div>
+                            <br>
+                            <label><i class="fas fa-user-friends"></i> <%= counts[0] %></label>
+                        </li>
+                        <li class="calendar-event">
+                            SEP 26 Mon<br>
+                            2:00 PM - 3:00 PM<br>
+                            <div>
+                                <input type="radio" name="date-2" value="0" checked>Unavailable<br>
+                                <input type="radio" name="date-2" value="1">Available<br>
+                                <input type="radio" name="date-2" value="2">Yes, if need be
+                            </div>
+                            <br>
+                            <label><i class="fas fa-user-friends"></i> <%= counts[1] %></label>
+                        </li>
+                        <li class="calendar-event">
+                            SEP 27 Tue<br>
+                            9:00 AM - 10:00 AM<br>
+                            <div>
+                                <input type="radio" name="date-3" value="0" checked>Unavailable<br>
+                                <input type="radio" name="date-3" value="1">Available<br>
+                                <input type="radio" name="date-3" value="2">Yes, if need be
+                            </div>
+                            <br>
+                            <label><i class="fas fa-user-friends"></i> <%= counts[2] %></label>
+                        </li>
+                        <li class="calendar-event">
+                            SEP 28 Wed<br>
+                            2:00 PM - 3:00 PM<br>
+                            <div>
+                                <input type="radio" name="date-4" value="0" checked>Unavailable<br>
+                                <input type="radio" name="date-4" value="1">Available<br>
+                                <input type="radio" name="date-4" value="2">Yes, if need be
+                            </div>
+                            <br>
+                            <label><i class="fas fa-user-friends"></i> <%= counts[3] %></label>
+                        </li>
+                    </ul>
+                </li>
+                <!--Iterate through the list of TODO objects and display their details in the list item element-->
+                <!--Inside <%%> are scripting language-->
+                <li>
+                    <ul>
+                        <% calendarCard.forEach(details => { %> 
+                        <li class="calendar-avail">
+                            <div class="todo-list-item-name"><%= details.name %></div>
+                        </li>  
+                            <% details.content.forEach(avail => { %>
+                            <li class="calendar-avail">
+                                <!--Display the content of task-->
+                                <% if (avail=="0") { %>
+                                    <div class="unavailable-date"><i class="fas fa-times"></i></div>
+                                <% } else if (avail=="1") { %>
+                                    <div class="available-date"><i class="fas fa-check"></i></div>
+                                <% } else { %>
+                                    <div class="partially-avail">
+                                        (<i class="fas fa-check"></i>)
+                                    </div>
+                                <% } %>
+                            </li>
+                            <% }) %>
+                        <% }) %>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--Title for sending an email input box-->
+        <h3>Enter Your Name here and Submit Response!</h3>
+        <!--Container of email address input box-->
+        <div class="todo">
+            <!--Action for submiting email address and request an email copy of TODO list-->
+            
+            <!--Input form for the email address-->
+            <input type="text" name="name" class="todo-header">
+            <!--Submit email address button-->
+            <button type="submit"><span class="fas fa-envelope"></span></button>
+        </div>
+    </form>
+    </div>
+</body>
