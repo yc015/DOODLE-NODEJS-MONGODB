@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #C060A1;
+    background: #7FBCD2;
 }
 
 /* Style for todo-container class */
@@ -43,6 +43,7 @@ body {
 .todo {
     /* Set the width of this element to 400px */
     width: 1400px;
+    text-align: center;
 }
 
 /* Set the appearance of the h2 inside the element of todo-container class*/
@@ -68,13 +69,13 @@ body {
 /* Set the appearance for the input element inside the element of todo-container class */
 .todo-header {
     /* Let the width of input box to be 92% of its container */
-    width: 92%;
+    width: 50%;
     /* Set border to its initial value */
     border: none;
     /* Round the corner of the input box */
     border-radius: 5px;
     /* Let the height of input box to be 20px */
-    height: 20px;
+    height: 40px;
     text-align: center;
 }
 
@@ -123,19 +124,19 @@ body {
 .partially-avail {
     color: orange;
     background-color: lightyellow;
-    height: 110px; 
+    height: 80px; 
 }
 
 .unavailable-date {
     color: black;
     background-color: grey;
-    height: 110px; 
+    height: 80px; 
 }
 
 .available-date {
     color: limegreen;
     background-color: lightgreen;
-    height: 110px; 
+    height: 80px; 
 }
 
 .calendar-avail {
@@ -149,11 +150,11 @@ body {
     border-radius: 5px;
     /* Use font Candal (or sans-serif if Candal is not available) */
     font-family: 'Candal', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     background: rgba(0, 0, 0, 0.3);
     display: inline-block;
     width: 250px;
-    height: 130px;
+    height: 100px;
     align-items: center;
     align-content: center;
     text-align: center;
@@ -233,7 +234,7 @@ body {
     padding: 5px;
     font-family: 'Candal', sans-serif;
     background-color: #FF5733;
-    width: 40px;
+    width: 100px;
 }
 
 /* Set the appearance for div inside todo-list-item class container*/
