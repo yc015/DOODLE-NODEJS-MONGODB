@@ -19,7 +19,7 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => {
     // Output connection success message if successfully connected
     console.log("Conection to Mongodb database is successful!");
     // Host the app on port 3000 of the local server
-    app.listen(8080, () => console.log("Server Up and running"));
+    app.listen(process.env.PORT || 5000);
 });
 
 // Link with the resource under public
