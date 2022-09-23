@@ -11,6 +11,9 @@
 /* Style for the body */
 body {
     /* Set the background color of the body element */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: #C060A1;
 }
 
@@ -18,17 +21,10 @@ body {
 .todo-container {
     /* Text color */
     color: white;
-    /* Position this element using absolute (positioned relative to its closest ancestor) */
-    position: absolute;
-    /* position this element in the center of its container */
-    top:50%;
-    left: 50%;
     /* pad it by 20px */
     padding: 20px;
     /* Set its width to 600px */
     width: 1500px;
-    /* Position this element in the center of its container */
-    transform: translate(-50%,-50%);
     /* Set background color (red, green, blue, opaqueness/alpha) */
     background: rgba(255, 255, 255, 0.1);
     /* Round the border with a arc that has radius of 20px */
@@ -38,7 +34,9 @@ body {
     /* Let element layout in a column*/
     flex-direction: column;
     /* Center aligh the elements inside*/
-    align-items: center;
+    align-items: center; 
+    justify-content: center; 
+    overflow: auto;
 }
 
 /* Set the appearance for the todo class*/
